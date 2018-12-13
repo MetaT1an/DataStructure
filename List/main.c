@@ -132,7 +132,7 @@ void fun_find(list* p_list)
     if(pos == -1){
         printf("[find]:Fail to find the number! (Number %d dose not exist)\n", num);
     } else {
-        printf("[find OK]:Number has been found! (pos: %d)", pos);
+        printf("[find OK]:Number has been found! (pos: %d)\n", pos);
     }
 }
 
@@ -144,7 +144,7 @@ void fun_print(list* p_list)
 void fun_len(list* p_list)
 {
     int len = length(p_list);
-    printf("[length]:Length of the list: %d", len);
+    printf("[length]:Length of the list: %d\n", len);
 }
 
 void fun_empty(list* p_list)
