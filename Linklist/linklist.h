@@ -14,13 +14,15 @@ typedef struct{
     int length;
 }linklist;
 
+typedef int Status;
+
 // init the linklist
 void init(linklist* link_list);
 
 int length(linklist* link_list);
 
 // add a node to the tail of the list
-int append(linklist* link_list, int num);
+Status append(linklist* link_list, int num);
 
 // get point of node with given index
 node* get(linklist* link_list, int index);
@@ -29,13 +31,13 @@ node* get(linklist* link_list, int index);
 int find(linklist* link_list, int num);
 
 // reset the value of node
-int reset(linklist* link_list, int index, int num);
+Status reset(linklist* link_list, int index, int num);
 
 // insert a node
-int insert(linklist* link_list, int index, int num);
+Status insert(linklist* link_list, int index, int num);
 
 // delete node via index
-int del(linklist* link_list, int index);
+Status del(linklist* link_list, int index);
 
 // print the list
 void print(linklist* link_list);

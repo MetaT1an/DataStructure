@@ -31,7 +31,7 @@ void check_size(list* p_list)
     }
 }
 
-int add(list* p_list, int num)
+Status add(list* p_list, int num)
 {
     check_size(p_list);
 
@@ -44,7 +44,7 @@ int add(list* p_list, int num)
     return OK;
 }
 
-int insert(list* p_list, int index, int num)
+Status insert(list* p_list, int index, int num)
 {
     check_size(p_list);
 
@@ -67,7 +67,7 @@ int insert(list* p_list, int index, int num)
     return OK;
 }
 
-int reset(list* p_list, int index, int new_num)
+Status reset(list* p_list, int index, int new_num)
 {
     if(index < 0 || index >= p_list->length)
         return ERROR;
@@ -78,7 +78,7 @@ int reset(list* p_list, int index, int new_num)
     return  OK;
 }
 
-int del(list* p_list, int index)
+Status del(list* p_list, int index)
 {
     if(index < 0 || index >= p_list->length)
         return ERROR;

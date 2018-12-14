@@ -13,7 +13,7 @@ int length(linklist* link_list)
     return link_list->length;
 }
 
-int append(linklist* link_list, int num)
+Status append(linklist* link_list, int num)
 {
     // generate a new node
     node* block = (node*)malloc(sizeof(int));
@@ -88,7 +88,7 @@ int insert(linklist* link_list, int index, int num)
     return OK;
 }
 
-int reset(linklist* link_list, int index, int num)
+Status reset(linklist* link_list, int index, int num)
 {
     node* pos = get(link_list, index);
     if(pos == NULL)
@@ -98,7 +98,7 @@ int reset(linklist* link_list, int index, int num)
     return OK;
 }
 
-int del(linklist* link_list, int index)
+Status del(linklist* link_list, int index)
 {
     if(index < 0 || index >= link_list->length)
         return ERROR;

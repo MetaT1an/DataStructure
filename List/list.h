@@ -13,6 +13,8 @@ typedef struct{
     int size;
 }list;
 
+typedef int Status;
+
 // init a list, with initial length 0
 void init(list* p_list);
 
@@ -24,16 +26,16 @@ int length(list* p_list);
 void check_size(list* p_list);
 
 // add a number to the tail of the list
-int add(list* p_list, int num);
+Status add(list* p_list, int num);
 
 // insert a number to the list with given pos and val
-int insert(list* p_list, int index, int num);
+Status insert(list* p_list, int index, int num);
 
 // replace a number via index
-int reset(list* p_list, int index, int new_num);
+Status reset(list* p_list, int index, int new_num);
 
 // delete a number via index
-int del(list* p_list, int index);
+Status del(list* p_list, int index);
 
 // find a number, return its smallest index
 int find(list* p_list, int num);
