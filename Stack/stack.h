@@ -1,7 +1,7 @@
 #ifndef DATASTRUCTURE_STACK_H
 #define DATASTRUCTURE_STACK_H
 
-#define INIT_SISE 2
+#define INIT_SIZE 10
 #define INCREMENT 10
 
 #define OK 0

@@ -4,9 +4,9 @@
 
 void init(stack* stk)
 {
-    stk->base = (int*)malloc(INIT_SISE * sizeof(int));
+    stk->base = (int*)malloc(INIT_SIZE * sizeof(int));
     stk->top = stk->base;
-    stk->size = INIT_SISE;
+    stk->size = INIT_SIZE;
 }
 
 void destroy(stack* stk)

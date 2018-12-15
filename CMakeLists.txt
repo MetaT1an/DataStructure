@@ -11,4 +11,6 @@ add_executable(list_test ${SRC_LIST})
 set(SRC_LINKLIST Linklist/main.c Linklist/linklist.c)
 add_executable(linklist_test ${SRC_LINKLIST})
 
-# add_executable()
+# Stack
+set(SRC_STACK Stack/main.c Stack/stack.c)
+add_executable(stack_test ${SRC_STACK})
