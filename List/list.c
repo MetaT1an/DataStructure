@@ -127,6 +127,12 @@ void print(list* p_list)
 void empty(list* p_list)
 {
     free(p_list->data);
+    init(p_list);
+}
+
+void destroy(list* p_list)
+{
+    free(p_list->data);
     p_list->data = NULL;
 
     p_list->length = 0;

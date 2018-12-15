@@ -11,6 +11,7 @@ void fun_find(list* p_list);
 void fun_print(list* p_list);
 void fun_len(list* p_list);
 void fun_empty(list* p_list);
+void fun_destroy(list* p_list);
 
 int main()
 {
@@ -18,7 +19,7 @@ int main()
     init(&li);
 
     // function array
-    void (*f[])(list* p_list) = {fun_add, fun_insert, fun_reset, fun_del, fun_find, fun_print, fun_len, fun_empty};
+    void (*f[])(list* p_list) = {fun_add, fun_insert, fun_reset, fun_del, fun_find, fun_print, fun_len, fun_empty, fun_destroy};
     show_menu();
 
     int choice;
@@ -35,7 +36,8 @@ int main()
         show_menu();
         scanf("%d", &choice);
     }
-
+    //destroy the list
+    f[choice-1](&li);
     return 0;
 }
 
@@ -50,7 +52,8 @@ void show_menu()
     printf("5. find a number\n");
     printf("6. print the list\n");
     printf("7. get length of the list\n");
-    printf("8. quit\n");
+    printf("8. empty the list\n");
+    printf("9. destroy and quit\n");
     printf("================================\n");
 
 }
@@ -150,4 +153,11 @@ void fun_len(list* p_list)
 void fun_empty(list* p_list)
 {
     empty(p_list);
+    printf("[empty OK]:List is empty now!\n");
+}
+
+void fun_destroy(list* p_list)
+{
+    destroy(p_list);
+    printf("[destroy OK]:List hes been destroyed!\n");
 }

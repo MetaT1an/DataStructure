@@ -10,13 +10,14 @@ void fun_del(linklist* link_list);
 void fun_find(linklist* link_list);
 void fun_print(linklist* link_list);
 void fun_len(linklist* link_list);
-void fun_empty(linklist* link_list);
+void fun_destroy(linklist* link_list);
+
 int main()
 {
     linklist lklist;
     init(&lklist);
 
-    void (*f[])(linklist* link_list) = {fun_append, fun_insert, fun_reset, fun_del, fun_find, fun_print, fun_len, fun_empty};
+    void (*f[])(linklist* link_list) = {fun_append, fun_insert, fun_reset, fun_del, fun_find, fun_print, fun_len, fun_destroy};
     show_menu();
 
     int choice;
@@ -34,6 +35,7 @@ int main()
         scanf("%d", &choice);
     }
 
+    f[choice-1](&lklist);
     return 0;
 }
 
@@ -48,7 +50,7 @@ void show_menu()
     printf("5. find a number\n");
     printf("6. print the list\n");
     printf("7. get length of the list\n");
-    printf("8. quit\n");
+    printf("8. destroy and quit\n");
     printf("====================================\n");
 }
 
@@ -143,7 +145,8 @@ void fun_len(linklist* link_list)
     printf("[length]:Length of the list: %d\n", len);
 }
 
-void fun_empty(linklist* link_list)
+void fun_destroy(linklist* link_list)
 {
-    empty(link_list);
+    destroy(link_list);
+    printf("[destroy OK]:list has been destroyed!\n");
 }

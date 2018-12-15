@@ -42,6 +42,6 @@ Status del(linklist* link_list, int index);
 // print the list
 void print(linklist* link_list);
 
-void empty(linklist* link_list);
+void destroy(linklist* link_list);
 
 #endif //DATASTRUCTURE_LINKLIST_H

@@ -137,7 +137,7 @@ void print(linklist* link_list)
     putchar('\n');
 }
 
-void empty(linklist* link_list)
+void destroy(linklist* link_list)
 {
     node* p = link_list->head;
     node* q = p;

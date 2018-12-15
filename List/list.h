@@ -45,4 +45,6 @@ void print(list* p_list);
 
 void empty(list* p_list);
 
+void destroy(list* p_list);
+
 #endif //DATASTRUCTURE_LIST_H
