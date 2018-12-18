@@ -40,9 +40,15 @@ Status push(stack* stk, int num)
 {
     // in case the stack is full
     if(length(stk) == stk->size){
+        int len = stk->size;
+
         int* new_pos = (int*)realloc(stk->base, (stk->size + INCREMENT) * sizeof(int));
         if(new_pos == NULL)
             return ERROR;
+
+        stk->base = new_pos;
+        stk->size += INCREMENT;
+        stk->top = stk->base + len;
     }
 
     *(stk->top) = num;
