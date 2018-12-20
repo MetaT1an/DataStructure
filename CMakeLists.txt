@@ -14,3 +14,7 @@ add_executable(linklist_test ${SRC_LINKLIST})
 # Stack
 set(SRC_STACK Stack/main.c Stack/stack.c)
 add_executable(stack_test ${SRC_STACK})
+
+# Maze
+set(SRC_MAZE Stack/maze/main.c Stack/maze/grids.c Stack/maze/cell.c Stack/maze/cellStack.c)
+add_executable(maze ${SRC_MAZE})
